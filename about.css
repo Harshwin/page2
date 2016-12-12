@@ -1,48 +1,48 @@
-.navbar-nav a {
-	font-size: 11px;
-	padding: 14px 10px;
-	text-transform: uppercase;
-}
+	.navbar-nav a {
+		font-size: 11px;
+		padding: 14px 10px;
+		text-transform: uppercase;
+	}
 
-.navbar-nav {
-  width: 100%;
-  text-align: center;
-}
+	.navbar-nav {
+  		width: 100%;
+  		text-align: center;
+	}
 
-.navbar-nav > li {
-  float: none;
-  display: inline-block;
-}
+	.navbar-nav > li {
+  		float: none;
+  		display: inline-block;
+	}
 		  
-.head {
-	font-family:Calibri;
-	font-weight:100;
-	text-align:center;
-	color:black;
-}
+	.head {
+		font-family:Calibri;
+		font-weight:100;
+		text-align:center;
+		color:black;
+	}
 
-.jumbotron {
-    background-image: url(bubbles.jpg);
-    background-size: cover;
-    min-height: 200px;
-    /*background-repeat: no-repeat;*/
-} 
+	.jumbotron {
+    		background-image: url(bubbles.jpg);
+    		background-size: cover;
+    		min-height: 200px;
+  	  /*background-repeat: no-repeat;*/
+	} 
 	
-.content .col-sm-3 > p {
-	font-size: 22px;
-	color:black;
-	font-weight:bold;
-}  
+	.content .col-sm-3 > p {
+		font-size: 22px;
+		color:black;
+		font-weight:bold;
+	}  
 
-.content {
-	font-family: "Times new roman", Times, Serif;
-	font-size: 16px;
-} 
+	.content {
+		font-family: "Times new roman", Times, Serif;
+		font-size: 16px;
+	} 
 
-.navbar-fixed-bottom {
-	font-size: 12px;
-	font-family: "Times new roma", Times, serif;
-}
+	.navbar-fixed-bottom {
+		font-size: 12px;
+		font-family: "Times new roma", Times, serif;
+	}
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import url("font-awesome.min.css");
 
