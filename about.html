@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<!-- adding correct character set -->
+		<meta charset="utf-8" />
+		
+		<!-- to ensure proper touch zooming and rendering in mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!--CSS link-->
+		<link rel="stylesheet" href="about.css">
+	</head>
+    
+    
+    
+	<body>
+     
+     	<div class="top">
+			<div class="head">
+	     		<h1>Harshwin</h1>
+	     		<br />
+	     	</div>
+     
+			
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+	       			<ul class="nav navbar-nav">
+	       				<li><a href="index.html">Home</a></li>
+	       				<li class="active"><a href="about.html">About</a></li>
+	       				<li><a href="research.html">Research</a></li>
+	       				<li><a href="codes.html">Codes</a></li>
+	       				<li><a href="contact.html">Contact</a></li>
+	        		</ul>
+				</div>
+			</nav>
+		</div>
+		
+	
+		<br />
+		
+		<!-- Adding jumbotron template -->
+		 <div class="jumbotron"></div> 
+	
+		<div class="content">
+			<div class="container">
+				<div class="main">	
+					<div class="row">
+						<div class="col-sm-12">
+							<br />
+							<p>
+								All naturally occurring fluid flows are multiphase in nature. Research in the field of multiphase flows have a history of over 100 years. The earliest work can be dated back to the late 19th century when one of pioneers, Lord Rayleigh first observed and explained cavitation process from the unusual behavior of ship propellers. Computational approach for the multiphase flows have also come a long way since its inception in the 1950s by Garrett Birkhoff. But the phenomenon of interface is not yet known completely or cannot be simulated accurately even today. Hence, it was once told that the understanding turbulence and interfacial phenomena are tantamount to understanding relativity.<br /><br />A practical multiphase flow can have millions of particles that vary in space and time. To completely resolve this, a direct numerical simulation(DNS) of these flows can be done using an interface-capturing (such as Volume Of Fluid, Level Set) algorithm or  an interface-tracking algorithm. But the computational effort required makes it practically impossible for complex mixed flows even today and hence DNS is mostly limited to separated flows. On the other hand an Euler-Lagrange approach models multiphase particles as point/spherical particles which requires less computational resources when compared to the DNS but is limited to dispersed low void fraction regime flows. Whereas an Euler-Euler approach models both the phases in a continuum approach and can be used for a wide range of complex dispersed multiphase flows with the least computational effort but at an expense of the accuracy of the solution due to the use of statistical closure relations. Finally, none of these above approaches can individually be used to accurately simulate the mixed high void fraction regime (transitional) flows. Hence, a combination of two or more of above multiscale approaches is required in a single problem with perfect blending and interaction to achieve highly accurate results.<br /><br />The advent of better computing resources has in a way lead to the widespread use of the high fidelity DNS to understand complex flows and hence its importance should not be overlooked either. The success of the DNS is also highly dependent on the use of accurate numerical methods to simulate numerically challenging flows such as high density ratio flows.<br /><br />Hence, my interest primarily lies in the development of better numerical techniques for the accurate simulation of complex multiphase flows and in understanding the underlying physics of multiphase flows for the development of better models.<br />
+							</p>
+						</div>
+					</div>
+					<br /><br />
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Education</p>
+						</div>		
+						<div class="col-sm-7">
+							<p>PES Institute of Technology, Bangalore, India.<br />Bachelor of Technology in Electrical and Electronics Engineering, (CGPA: 8.42/10) <br /><i>Thesis: Object tracking for the applications in vehicle navigation and robotics based on colour and features.</i></p>
+						</div>
+						<div class="col-sm-2">
+							<p>May 2014</p>
+						</div>
+					</div>
+					<br /><br />
+				</div>
+			</div>
+		</div>
+    
+     
+     
+     <footer class="container-fluid text-center navbar-fixed-bottom">
+     	<p>Website designed by <a href="index.html">Harshwin</a></p>
+     </footer>
+   
+     </body>
+</html>
