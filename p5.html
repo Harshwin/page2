@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<!-- adding correct character set -->
+		<meta charset="utf-8" />
+		
+		<!-- to ensure proper touch zooming and rendering in mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!--CSS link-->
+		<link rel="stylesheet" href="p5.css">
+	</head>
+    
+    
+    
+	<body>
+     
+     	<div class="top">
+			<div class="head">
+	     		<h1>SUHAS JAIN SURESH</h1>
+	     		<br />
+	     	</div>
+     
+			
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+	       			<ul class="nav navbar-nav">
+	       				<li><a href="index.html">Home</a></li>
+	       				<li><a href="about.html">About</a></li>
+	       				<li class="active"><a href="research.html">Research</a></li>
+	       				<li><a href="codes.html">Codes</a></li>
+	       				<li><a href="contact.html">Contact</a></li>
+	        		</ul>
+				</div>
+			</nav>
+		</div>
+		
+	
+		<br />
+		
+		<!-- Adding jumbotron template -->
+		<!-- <div class="jumbotron"></div> -->
+	
+		<div class="content">
+			<div class="container">
+				<div class="main">	
+					<div class="row">
+						<div class="col-sm-12">
+							<br />
+							<a href ="research.html" class="link btn btn-info">Back</a>
+							<h3>Implementation of multiphase flow models in OpenFOAM</h3>
+							<br /><br />
+							<p>
+								Level set method was implemented in OpenFOAM with third-order WENO advection interpolation scheme and Olsson Kreiss reinitialization technique. Modified solver was validated using droplet coalescence and jet breakup. Comparative study of the effects of kothe, harmonic and arithmetic viscosity interpolation models was also done on jet breakup flows and bubble rise.<br /><br />Figures below show the simulation results of a bubble rise at 0.3 secs, where the buoyancy driven air bubble was initially of 25 mm in radius and its centre was at 30 mm above the bottom of the square tank of dimension 100 mm, filled with water up to 70 % of height. Better applicability of kothe's viscosity model for wide range of viscosity of fluids was demonstrated. Above models were implemented as libraries in the interFOAM solver of OpenFOAM.<br /><br />This project was done under the guidance of Prof. -Ing. Eugeny Kenig at the University of Paderborn, Germany and was supported by the DAAD (German Academic Exchange Program) - IAESTE summer research fellowship.
+							</p>
+							<br />	
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="kothe_interpolation.png" class="img-responsive center-block" alt="">
+							<p class="text-center">Kothe's Interpolation</p>						
+						</div>
+						<div class="col-sm-4">
+							<img src="harmonic_interpolation.png" class="img-responsive center-block" alt="">
+							<p class="text-center">Harmonic Interpolation</p>						
+						</div>
+						<div class="col-sm-4">
+							<img src="arithmetic_interpolation.png" class="img-responsive center-block" alt="">
+							<p class="text-center">Arithmetic Interpolation</p>						
+						</div>					
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-sm-12">
+							<h3>Level set method - Droplet coalescence</h3>
+							<p>Using the modified level set solver in OpenFOAM, droplet coalescence was simulated with identical droplets of initial radius 10 mm and centres separated by 20 mm. Pictures below show the result at 0.03, 0.06, 0.12, 0.2 seconds respectively.</p>						
+						</div>					
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="dc_upwind.png" class="img-responsive center-block" alt="">
+							<p class="text-center">Droplet Coalescence with Upwind</p>						
+						</div>
+						<div class="col-sm-6">
+							<img src="dc_weno.png" class="img-responsive center-block" alt="">
+							<p class="text-center">Droplet Coalescence with 3rd order WENO</p>							
+						</div>					
+					</div>
+					<br /><br />
+				</div>
+			</div>
+		</div>
+    
+     
+     
+     <footer class="container-fluid text-center navbar-fixed-bottom">
+     	<p>Website designed by <a href="index.html">Suhas Jain</a></p>
+     </footer>
+   
+     </body>
+</html>
