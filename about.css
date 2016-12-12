@@ -24,7 +24,7 @@
 	.jumbotron {
     		background-image: url(Back.jpg);
     		background-size: cover;
-    		min-height: 2px;
+    		min-height: 20px;
   	  /*background-repeat: no-repeat;*/
 	} 
 	
