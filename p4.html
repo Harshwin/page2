@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<!-- adding correct character set -->
+		<meta charset="utf-8" />
+		
+		<!-- to ensure proper touch zooming and rendering in mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!--CSS link-->
+		<link rel="stylesheet" href="p4.css">
+	</head>
+    
+    
+    
+	<body>
+     
+     	<div class="top">
+			<div class="head">
+	     		<h1>SUHAS JAIN SURESH</h1>
+	     		<br />
+	     	</div>
+     
+			
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+	       			<ul class="nav navbar-nav">
+	       				<li><a href="index.html">Home</a></li>
+	       				<li><a href="about.html">About</a></li>
+	       				<li class="active"><a href="research.html">Research</a></li>
+	       				<li><a href="codes.html">Codes</a></li>
+	       				<li><a href="contact.html">Contact</a></li>
+	        		</ul>
+				</div>
+			</nav>
+		</div>
+		
+	
+		<br />
+		
+		<!-- Adding jumbotron template -->
+		<!-- <div class="jumbotron"></div> -->
+	
+		<div class="content">
+			<div class="container">
+				<div class="main">	
+					<div class="row">
+						<div class="col-sm-12">
+							<br />
+							<a href ="research.html" class="link btn btn-info">Back</a>
+							<h3>Direct numerical simulation of gas-liquid multiphase flows - Development of a solver</h3>
+							<br /><br />
+							<p>
+								During my Bachelor Thesis, I developed an unsteady three-dimensional incompressible Navier-Stokes solver on both staggered and collocated grids with finite volume method of discretization. Time integration was done using second order implicit three-time-level scheme. Interface was captured with an algebraic VOF method and CICSAM advection scheme. CSF was implemented to account for surface tension along with Kernel K8 convolution for curvature calculation. The developed solver was successfully validated using the lid-driven cavity, mixed convection in cavity, rotation of slotted disk, drop in shear flows, static drop and dynamic drop test cases. Based on the results from test cases, few modifications were made to the solver to improve the accuracy and convergence. CICSAM was replaced by STACS which in turn was replaced by HiRAC with pseudo-time stepping to effectively avoid unbounded solution. Kernel convolution was replaced by height function method to improve the accuracy of the curvature calculation. Hybrid deferred correction method was developed and implemented with QUICK scheme for convective terms to improve the convergence of the solver.<br /><br />This project was carried out under the guidance of Prof. Ravikiran kadoli as part of my Bachelor Thesis. This work was also presented at 5th International and 41st National Conference on Fluid Mechanics and Fluid Power, Indian Institute of Technology Kanpur (IITK), India, Dec 2014.<br /><br />C language was used for development of the solver.<br />Post processing for all the cases was done using MATLAB, Techplot 8 and Paraview.
+							</p>
+							<br />	
+						</div>
+					</div>
+					<br />					
+					<div class="row">
+						<div class="col-sm-8">
+							<h3>1. Navier-Stokes solver - Lid-driven cavity</h3>
+							<p>After the development of Navier-Stokes solver, an improved deferred correction method which predicts using the power-law scheme and corrects with the QUICK scheme to interpolate convective terms was developed to obtain better convergence. Lid-driven cavity test case was used to validate the solver. Results were compared for Reynolds number 1, 100, 400, 1000, 3200, 5000, 7500, 10000 and a streamline plot for Re 1000 is shown below at 100th second (physical time).</p>
+						</div>
+						<div class="col-sm-4">
+							<img src="lid_driven.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">Lid driven cavity at Re 1000</p>						
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-sm-12">
+							<h3>2. VOF solver - Static drop in equilibrium</h3>
+							<p>After the implementation of the algebraic VOF solver with CSF, a static drop in equilibrium was studied. A static drop within a domain of 8x8 with 40X40 cells is shown below at 0.001 secs. Max velocity of parasitic currents was found to be 0.051 m/s for Kernel convolution and 0.0143 m/s for height function method.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="kernel_convolution.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">Kernel Convolution</p>							
+						</div>
+						<div class="col-sm-6">
+							<img src="height_function.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">Height Function</p>		
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="p_jump_hf.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">Pressure jump inside the drop (Height function)</p>
+						</div>
+						<div class="col-sm-6">
+							<img src="p_jump_ec.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">Pressure jump inside the drop (exact curvature)</p>
+						</div>	
+					</div>
+					<br />					
+					<div class="row">
+						<div class="col-sm-12">
+							<h3>3. VOF solver - Rotation of a slotted disk</h3>
+							<p>A circle with a slot is exposed to a circular velocity field. The mesh size of 100x100 was used, with the centre of the circle at (0.5, 0.5) and the centre of rotation at (0.5, 0.5). Simulation was performed at a courant number of 0.25. Results obtained using CICSAM and STACS were almost same at Courant number (Co) 0.25 and STACS performed better at Co 0.9.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="ic_tp.jpg" class="img-responsive center-block" alt="">
+						</div>
+						<div class="col-sm-4">
+							<img src="ahr_tp.jpg" class="img-responsive center-block" alt="">
+						</div>
+						<div class="col-sm-4">
+							<img src="aofr_tp.jpg" class="img-responsive center-block" alt="">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="ic_ml.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">Initial Condition</p>
+						</div>
+						<div class="col-sm-4">
+							<img src="ahr_ml.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">After Half Rotation</p>
+						</div>
+						<div class="col-sm-4">
+							<img src="aofr_ml.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">After One Full Rotation</p>
+						</div>
+					</div>
+					<br />					
+					<div class="row">
+						<div class="col-sm-12">
+							<h3>4. VOF solver - Round drop in shear flow</h3>
+							<p>A droplet is placed off centre in a rotating shear flow field. After one rotation, the flow field is reversed with an aim of recovering the original round droplet. The mesh used was 50x50 cells and the simulation was carried out for 5 seconds with reversal of velocity field at 2.5 seconds.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="cicsam_hr.jpg" class="img-responsive center-block" alt="">						
+						</div>
+						<div class="col-sm-6">
+							<img src="stacs_hr.jpg" class="img-responsive center-block" alt="">						
+						</div>					
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="cicsam_fr.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">CICSAM</p>						
+						</div>
+						<div class="col-sm-6">
+							<img src="stacs_fr.jpg" class="img-responsive center-block" alt="">
+							<p class="text-center">STACS</p>						
+						</div>					
+					<br /><br />
+				</div>
+			</div>
+		</div>
+    
+     
+     
+     <footer class="container-fluid text-center navbar-fixed-bottom">
+     	<p>Website designed by <a href="index.html">Suhas Jain</a></p>
+     </footer>
+   
+     </body>
+</html>
