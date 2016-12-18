@@ -19,14 +19,7 @@
 	font-weight:100;
 	text-align:center;
 	color:black;
-}
-
-.jumbotron {
-    background-image: url(bubbles.jpg);
-    background-size: cover;
-    min-height: 200px;
-    /*background-repeat: no-repeat;*/
-} 
+	} 
 	
 .content .col-sm-3 > p {
 	font-size: 22px;
@@ -41,5 +34,5 @@
 
 .navbar-fixed-bottom {
 	font-size: 12px;
-	font-family: "Times new roma", Times, serif;
+font-family: "Times new roma", Times, serif;
 }
