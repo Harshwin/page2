@@ -1453,7 +1453,8 @@
 			position: relative;
 			display: inline-block;
 			margin: 0.25em;
-			padding-right: 130px;
+			padding-right: 10px;
+			text-align: center
 			top: 0;
 		}
 
